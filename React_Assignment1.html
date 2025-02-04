@@ -1,0 +1,44 @@
+
+<html>
+<head>
+  <title>React_Assignment1</title>
+</head>
+<body>
+  <p>Input field and Submit Button Example</p>
+  <input type="text" id="txt_input" >
+  <button id="sbButton" onclick="sbClick()">Submit</button>
+
+ <p><span id="showData"></span></p> 
+
+  <script>
+ const txtElement = document.getElementById('txt_input');
+ const showSpan = document.getElementById('showData');
+ const submitElement = document.getElementById('sbButton');
+//on click event 
+function sbClick(){
+ showSpan.innerText=txtElement.value;
+}
+
+// mouseover event
+txtElement.addEventListener('mouseover', function() {
+showSpan.style.fontSize="30px";
+    });    
+    
+    // mouseout event
+txtElement.addEventListener('mouseout', function() {
+     showSpan.style.fontSize="20px";
+    });    
+    // on change event
+txtElement.addEventListener('change', function() {
+    console.log("change event ",txtElement.value);
+    });
+   // input event
+    txtElement.addEventListener('input', function() {
+      console.log("input event ",txtElement.value);
+    });
+    
+    
+  </script>
+
+</body>
+</html>
